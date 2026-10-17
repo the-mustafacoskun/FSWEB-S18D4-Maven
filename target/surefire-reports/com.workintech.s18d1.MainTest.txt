@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: com.workintech.s18d1.MainTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 1, Errors: 4, Skipped: 0, Time elapsed: 0.488 s <<< FAILURE! -- in com.workintech.s18d1.MainTest
+com.workintech.s18d1.MainTest.testFindById_NotExists -- Time elapsed: 0.032 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected com.workintech.s18d1.exceptions.BurgerException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.workintech.s18d1.MainTest.testFindById_NotExists(MainTest.java:114)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testSave -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "jakarta.persistence.TypedQuery.setParameter(String, Object)" because "query" is null
+	at com.workintech.s18d1.dao.BurgerDaoImpl.save(BurgerDaoImpl.java:28)
+	at com.workintech.s18d1.MainTest.testSave(MainTest.java:89)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindByBreadType -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "jakarta.persistence.TypedQuery.getResultList()" because the return value of "jakarta.persistence.TypedQuery.setParameter(String, Object)" is null
+	at com.workintech.s18d1.dao.BurgerDaoImpl.findByBreadType(BurgerDaoImpl.java:96)
+	at com.workintech.s18d1.MainTest.testFindByBreadType(MainTest.java:150)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindByContent -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "jakarta.persistence.TypedQuery.getResultList()" because the return value of "jakarta.persistence.TypedQuery.setParameter(String, Object)" is null
+	at com.workintech.s18d1.dao.BurgerDaoImpl.findByContent(BurgerDaoImpl.java:91)
+	at com.workintech.s18d1.MainTest.testFindByContent(MainTest.java:159)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testUpdate -- Time elapsed: 0.001 s <<< ERROR!
+com.workintech.s18d1.exceptions.BurgerException: Burger cannot be null
+	at com.workintech.s18d1.dao.BurgerDaoImpl.update(BurgerDaoImpl.java:42)
+	at com.workintech.s18d1.MainTest.testUpdate(MainTest.java:122)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
